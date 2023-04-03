@@ -1,0 +1,275 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Karla', sans-serif;
+  color: #293264;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: #4D5B9E;;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+hr {
+  border: 0.75px solid #DBDEF0;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  width: 92%;
+}
+
+.app-screen {
+  width: 700px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding-top: 1.5em;
+  background: #F5F7FB;
+  background-image: url(/game-background.png);
+  background-size: cover;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.home-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.game-title {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.game-description {
+  width: 300px;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+form {
+  text-align: center;
+}
+
+form > label {
+  font-size: 1rem;
+  text-align: left;
+}
+
+form > select {
+  background: white;
+  font-family: inherit;
+  color: #293264;
+  border: 1px solid #4D5B9E;
+  border-radius: 8px;
+  padding: 0.35em 1em;
+  margin-left: 1em;
+  margin-bottom: 1em;
+  width: 55%;
+}
+
+.first-select {
+  margin-left: 1.2em;
+}
+
+.start-btn-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.start-btn {
+  font-size: 1rem;
+  border-radius: 15px;
+  padding: 1em 3.5em;
+}
+
+.question {
+  font-size: 1rem;
+  line-height: 1.2;
+  margin: 0.5rem 2rem;
+}
+
+.answers-div {
+  display: flex;
+  margin: 0 1rem 0 2rem;
+}
+
+.answer {
+  font-size: 0.85rem;
+  color: #293264;
+  border-radius: 8px;
+  padding: 0.25em 1.5em;
+  margin-right: 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.bottom-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-btn {
+  font-size: 0.85rem;
+  border-radius: 10px;
+  padding: 0.75em 1.5em;
+  margin: 1rem 0.5rem;
+}
+
+.score-message {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+
+
+/* loading animation */
+
+.lds-spinner {
+  color: official;
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-spinner div {
+  transform-origin: 40px 40px;
+  animation: lds-spinner 1.2s linear infinite;
+}
+.lds-spinner div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 37px;
+  width: 6px;
+  height: 18px;
+  border-radius: 20%;
+  background: #293264;
+}
+.lds-spinner div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -1.1s;
+}
+.lds-spinner div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -1s;
+}
+.lds-spinner div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -0.9s;
+}
+.lds-spinner div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -0.8s;
+}
+.lds-spinner div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -0.7s;
+}
+.lds-spinner div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -0.6s;
+}
+.lds-spinner div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -0.5s;
+}
+.lds-spinner div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.4s;
+}
+.lds-spinner div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.3s;
+}
+.lds-spinner div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.2s;
+}
+.lds-spinner div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.1s;
+}
+.lds-spinner div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+}
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+@media only screen and (max-width: 700px) {
+  hr {
+    margin-top: 1rem;
+  }
+
+  .app-screen {
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url(/game-background-mobile.png);
+    padding-bottom: 2rem;
+  }
+
+  .answers-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 1rem;
+  }
+
+  .answer {
+    margin-right: 0.75rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .bottom-div {
+    flex-direction: column;
+  }
+
+  .game-btn {
+    margin: 0.5rem 0;
+  }
+  
+  .score-message {
+    margin: 0;
+    margin-bottom: 1em;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 700px) {
+  .app-screen {
+    background-image: url(/game-background-mid.png);
+  }
+
+}
