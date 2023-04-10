@@ -8,6 +8,7 @@ body {
   margin: 0;
   font-family: 'Karla', sans-serif;
   color: #293264;
+  background: white;
 }
 
 button {
@@ -27,14 +28,37 @@ hr {
 }
 
 .app-screen {
-  width: 700px;
-  margin: 0 auto;
-  min-height: 100vh;
+  width: 750px;
+  margin: 1.5em auto;
+  min-height: 93vh;
   padding-top: 1.5em;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  position: relative;
   background: #F5F7FB;
-  background-image: url(/game-background.png);
-  background-size: cover;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.content-div {
+  position: relative;
+  z-index: 20;
+}
+
+.blob-blue {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  height: 150px;
+  z-index: 1;
+}
+
+.blob-yellow {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 200px;
+  height: 150px;
+  z-index: 1;
 }
 
 .home-screen {
@@ -42,11 +66,11 @@ hr {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 90vh;
 }
 
 .game-title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin: 0;
 }
 
@@ -77,7 +101,7 @@ form > select {
   padding: 0.35em 1em;
   margin-left: 1em;
   margin-bottom: 1em;
-  width: 55%;
+  width: 60%;
 }
 
 .first-select {
@@ -142,7 +166,7 @@ form > select {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 85vh;
 }
 
 
@@ -235,10 +259,52 @@ form > select {
   }
 
   .app-screen {
+    margin: 0 auto;
     width: 100vw;
     min-height: 100vh;
-    background-image: url(/game-background-mobile.png);
     padding-bottom: 2rem;
+    border-radius: 0;
+  }
+
+  .blob-blue {
+    width: 200px;
+    height: 110px;
+  }
+  
+  .blob-yellow {
+    width: 200px;
+    height: 120px;
+  }
+
+  .game-title {
+    font-size: 2.5rem;
+  }
+
+  form {
+    text-align: left;
+  }
+
+  form > label {
+    margin-left: 10vw;
+  }
+
+  form > select {
+    margin-left: 10vw;
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+    width: 80vw;
+  }
+
+  .first-select {
+    margin-left: 10vw;
+  }
+
+  .start-btn-div {
+    margin-top: 1.5rem;
+  }
+
+  .question {
+    margin: 0.25rem 1.5rem;
   }
 
   .answers-div {
@@ -250,7 +316,7 @@ form > select {
 
   .answer {
     margin-right: 0.75rem;
-    margin-bottom: 0.15rem;
+    margin-bottom: 0;
   }
 
   .bottom-div {
@@ -265,11 +331,4 @@ form > select {
     margin: 0;
     margin-bottom: 1em;
   }
-}
-
-@media only screen and (min-width: 500px) and (max-width: 700px) {
-  .app-screen {
-    background-image: url(/game-background-mid.png);
-  }
-
 }

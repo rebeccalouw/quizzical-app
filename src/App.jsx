@@ -34,6 +34,8 @@ export default function App() {
   function backToPreferences() {
     setGameStarted(false)
     setSelectedAnswers([])
+    setCheckingAnswers(false)
+    setEndGame(false)
     setReachAPI(prevState => !prevState)
   }
 
@@ -151,18 +153,22 @@ export default function App() {
 
   return (
     <div className="app-screen">
-      {!gameStarted && <Home handleClick={startGame} handleChange={handleChangeQuizPreference} quizPreference={quizPreference}/> }
-      {gameStarted && (isLoading ? loadingPage : 
-        <Game 
-          quizData={quizData}
-          holdAnswer={holdAnswer}
-          checkAnswers={checkAnswers}
-          checkingAnswers={checkingAnswers}
-          restartGame={restartGame}
-          endGame={endGame}
-          scoreMessage={scoreMessage}
-          backToPreferences={backToPreferences}
+      <div className="content-div">
+        {!gameStarted && <Home handleClick={startGame} handleChange={handleChangeQuizPreference} quizPreference={quizPreference}/> }
+        {gameStarted && (isLoading ? loadingPage : 
+          <Game 
+            quizData={quizData}
+            holdAnswer={holdAnswer}
+            checkAnswers={checkAnswers}
+            checkingAnswers={checkingAnswers}
+            restartGame={restartGame}
+            endGame={endGame}
+            scoreMessage={scoreMessage}
+            backToPreferences={backToPreferences}
         />)}
+      </div>
+      <img src="/blobs-blue.png" alt="" className="blob-blue"/>
+      <img src="/blobs-yellow.png" alt="" className="blob-yellow"/>
     </div>
   )
 }
