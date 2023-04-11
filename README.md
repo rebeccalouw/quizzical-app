@@ -28,7 +28,7 @@ This is the first time I built a React app from scratch by myself and it was a c
 
 <br/>
 
-<img alt="." src="public/quizzical-demo1.png" height="400px"/> <img alt="." src="public/quizzical-demo2.png" height="400px"/>
+<img alt="." src="public/quizzical-demo1.png" width="400px"/> <img alt="." src="public/quizzical-demo2.png" width="400px"/>
 
 <br/>
 
