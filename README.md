@@ -1,4 +1,4 @@
-# Quizzical ❔✅ Trivia Game
+# Quizzical ❔✅ 
 
 #### ✨ Deployed/demo version ![https://rebecca-quizzical.netlify.app/](https://rebecca-quizzical.netlify.app/)
 
