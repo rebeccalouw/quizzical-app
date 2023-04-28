@@ -1,6 +1,6 @@
 # Quizzical ❔✅ 
 
-#### ✨ Deployed/demo version ![https://rebecca-quizzical.netlify.app/](https://rebecca-quizzical.netlify.app/)
+#### ✨ Deployed/demo version <a href="https://rebecca-quizzical.netlify.app/" target="_blank" rel="noreferrer">https://rebecca-quizzical.netlify.app/</a> 
 
 ## Demo overview
 Quizzical is a trivia game built in React.js using the 'Open Trivia DB'. 
@@ -36,7 +36,7 @@ This is the first time I built a React app from scratch by myself and although i
 
 
 ## API
-- ![Open Trivia Database](https://opentdb.com/)
+- <a href="https://opentdb.com/" target="_blank" rel="noreferrer">Open Trivia Database</a> 
 
 ## Author: 
 👩‍💻 Rebecca Louw ![@rebeccalouw](https://github.com/rebeccalouw)
