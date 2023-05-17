@@ -15,7 +15,7 @@ Possible actions:
 
 ## Developer overview
 This is the first time I built a React app from scratch by myself and although it was challenging, it was a very rewarding exercise.
-- The app using function components and React Hooks
+- The app was built using function components and React Hooks
 - All the 'State' pieces are held and managed on the main App file and passed down to the components, making use of 'props'
 - On the initial page the user selects the subject category and difficulty level for the questions. The value from those input fields syncs with 'State' and informs how the API call should happen
 - Upon receiving the data, the incorrect and correct answers are joined together into one array and shuffled to display in a random order
